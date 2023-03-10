@@ -1,5 +1,16 @@
-<h1>Lists</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://i.kinja-img.com/gawker-media/image/upload/c_fit,f_auto,g_center,pg_1,q_60,w_1600/c8dce355ec2381d3f447cd4e978a08d5.png');">
+  <div class="container">
+    <h1>Lists</h1>
+    <p>Here is a list of all movie categories!</p>
+  </div>
+</div>
 
-<% @lists.each do |list| %>
-  <h2><%= link_to list.name, list_path(list) %></h2>
-<% end %>
+<div class="container">
+  <div class="cards">
+    <% @lists.each do |list| %>
+      <div class="card-body">
+        <h2><%= link_to list.name, list_path(list) %></h2>
+      </div>
+    <% end %>
+  </div>
+</div>
